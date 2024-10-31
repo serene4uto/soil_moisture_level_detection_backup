@@ -1,0 +1,5 @@
+- creat_model.py---for building a classification network (pretrained model or not)
+- data_loader.py---for loading the dataset and some processing methods
+- train.py---for training a new model
+- inference.py---for runing the trained model on an image
+- inference_video.py---for runing the trained model on a video/camera
