@@ -38,10 +38,10 @@ class Inference:
 
 
 if __name__ == "__main__":
-    model_path = r'C:\Users\kde10\OneDrive\바탕 화면\MoistLevelUpdate_20241111\update_20241111\mobilenetv3_3_classes.pth'
+    model_path = r'C:\Users\rnd2\Desktop\soil_moisture_detection_demo\soil_moisture_level_detection_backup\mobilenetv3_3_classes.pth'
 
     # C:\Users\kde10\OneDrive\바탕 화면\MoistLevelUpdate_20241111\update_20241111\test_set\low
-    image_path = r"C:\Users\kde10\OneDrive\바탕 화면\MoistLevelUpdate_20241111\update_20241111\test_set\high\240924_15_00_23_#116.bmp"
+    image_path = r"C:\Users\rnd2\Desktop\soil_moisture_detection_demo\soil_moisture_level_detection_backup\test_set\high\240924_15_00_23_#116.bmp"
 
     class_names = ['high', 'low', 'medium']
 
