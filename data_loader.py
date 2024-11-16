@@ -12,6 +12,11 @@ class DataLoaderWrapper:
         self.train_transform = transforms.Compose([
             transforms.Resize(self.img_size),
             transforms.RandomHorizontalFlip(),  # Data augmentation for training
+            transforms.RandomRotation(15),
+            transforms.RandomAffine(degrees=0, translate=(0.1, 0.1)),
+            transforms.RandomResizedCrop(self.img_size,   # Randomly crops and resizes to the original image size
+                                 scale=(0.8, 1.2),
+                                 ratio=(0.75, 1.33)),
             transforms.ToTensor(),
             transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
         ])
@@ -32,6 +37,6 @@ class DataLoaderWrapper:
         return self.train_loader, self.val_loader
 
 # # test code here
-# root_path = r"D:\2.code\kaleem_code\dataset"
+# root_path = r"D:\daumn\2.code\kaleem_code\dataset"
 # data_loader = DataLoaderWrapper(train_dir=root_path+ '/train', val_dir=root_path+ '/test', batch_size=32)
 # train_loader, val_loader = data_loader.get_loaders()
